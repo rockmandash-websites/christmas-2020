@@ -1,32 +1,35 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div>
+    <div v-if="$route.name === 'Home'">
+      <p>
+        Line 按鍵盤右鍵就是下一個訊息
+      </p>
+      <p>
+        數字鍵 1 可以全部重來
+      </p>
+      <p>
+        總共只有 8 個訊息
+      </p>
+
+      <router-link to="/line" target="_blank"
+        >在新視窗打開跟 Jason Line 的對話</router-link
+      >
     </div>
-    <router-view/>
+
+    <router-view v-else />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import Vue from "vue";
 
-#nav {
-  padding: 30px;
-}
+import { injectGlobal } from "@emotion/css";
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+injectGlobal`
+  body {
+    margin: 0;
+  }
+`;
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default Vue.extend({});
+</script>
