@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Line from "@/views/Line/index.vue";
+import Siri from "@/views/Siri/index.vue";
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,11 @@ const routes: Array<RouteConfig> = [
     path: "/line",
     name: "Line",
     component: Line,
+  },
+  {
+    path: "/siri",
+    name: "Siri",
+    component: Siri,
   },
 ];
 
