@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from "vue-router";
 import Line from "@/views/Line/index.vue";
 import Siri from "@/views/Siri/index.vue";
 import SiriIdonKnow from "@/views/SiriIdonKnow/index.vue";
+import Countdown from "@/views/Countdown/index.vue";
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,11 @@ const routes: Array<RouteConfig> = [
     path: "/siri-i-dont-know",
     name: "SiriIdonKnow",
     component: SiriIdonKnow,
+  },
+  {
+    path: "/countdown",
+    name: "Countdown",
+    component: Countdown,
   },
 ];
 

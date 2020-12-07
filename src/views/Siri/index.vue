@@ -218,6 +218,8 @@ export default Vue.extend({
     },
   },
   beforeDestroy() {
+    Mousetrap.unbind("right");
+    Mousetrap.unbind("1");
     this.mainTl.kill();
   },
   mounted() {
