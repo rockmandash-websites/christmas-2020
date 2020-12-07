@@ -28,6 +28,20 @@
       <router-link to="/siri" target="_blank"
         >在新視窗打開跟 Siri 的對話</router-link
       >
+
+      <p>
+        按鍵盤右鍵就是下一個訊息
+      </p>
+      <p>
+        數字鍵 1 可以全部重來
+      </p>
+      <p>
+        總共只有 1 個訊息
+      </p>
+
+      <router-link to="/siri-i-dont-know" target="_blank"
+        >在新視窗打開跟 Siri I don't know 的對話</router-link
+      >
     </div>
 
     <router-view v-else />
