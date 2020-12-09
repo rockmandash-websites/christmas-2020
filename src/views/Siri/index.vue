@@ -226,23 +226,29 @@ export default Vue.extend({
     gsap.to(this.$refs.innerContainer, { opacity: 1, duration: 1 });
 
     this.mainTl
-      .from(this.$refs.sad, { opacity: 0, duration: 0.1 }, 0)
-      .call(
-        () => {
-          siriSound.siriSadSound.play();
+      .from(
+        this.$refs.sad,
+        {
+          opacity: 0,
+          duration: 0.1,
+          onComplete: () => {
+            siriSound.siriSadSound.play();
+          },
         },
-        undefined,
         0
       )
-      .addLabel("message1")
-      .call(
-        () => {
-          siriSound.siriNoLieSound.play();
+      .addLabel("message1", 0.9)
+      .to(
+        this.$refs.sad,
+        {
+          opacity: 0.2,
+          duration: 0.1,
+          onComplete: () => {
+            siriSound.siriNoLieSound.play();
+          },
         },
-        undefined,
         1
       )
-      .to(this.$refs.sad, { opacity: 0.2, duration: 0.1 }, 1)
       .from(this.$refs.lie, { opacity: 0, duration: 0.1 }, 1)
       .addLabel("message2");
 
