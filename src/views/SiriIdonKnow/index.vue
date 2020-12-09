@@ -132,12 +132,15 @@ export default Vue.extend({
     gsap.to(this.$refs.innerContainer, { opacity: 1, duration: 1 });
 
     this.mainTl
-      .from(this.$refs.iDontKnowRef, { opacity: 0, duration: 0.1 }, 0)
-      .call(
-        () => {
-          siriSound.siriIdonKnowSound.play();
+      .from(
+        this.$refs.iDontKnowRef,
+        {
+          opacity: 0,
+          duration: 0.1,
+          onComplete: () => {
+            siriSound.siriIdonKnowSound.play();
+          },
         },
-        undefined,
         0
       )
       .addLabel("message1");
