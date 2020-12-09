@@ -1376,16 +1376,15 @@ export default Vue.extend({
         1
       )
       .addLabel("message1")
-      .call(
-        () => {
-          lineSound.play();
-        },
-        undefined,
-        2
-      )
       .from(
         document.getElementById("message2"),
-        { opacity: 0, duration: 0.1 },
+        {
+          opacity: 0,
+          duration: 0.1,
+          onComplete: () => {
+            lineSound.play();
+          },
+        },
         2
       )
       .addLabel("message2")
@@ -1400,16 +1399,15 @@ export default Vue.extend({
         4
       )
       .addLabel("message3")
-      .call(
-        () => {
-          lineSound.play();
-        },
-        undefined,
-        5
-      )
       .from(
         document.getElementById("message4"),
-        { opacity: 0, duration: 0.1 },
+        {
+          opacity: 0,
+          duration: 0.1,
+          onComplete: () => {
+            lineSound.play();
+          },
+        },
         5
       )
       .addLabel("message4")
@@ -1425,14 +1423,17 @@ export default Vue.extend({
         7
       )
       .addLabel("message5")
-      .call(
-        () => {
-          lineSound.play();
+      .to(
+        document.getElementById("messages"),
+        {
+          y: "-35%",
+          duration: 0.5,
+          onComplete: () => {
+            lineSound.play();
+          },
         },
-        undefined,
         8
       )
-      .to(document.getElementById("messages"), { y: "-35%", duration: 0.5 }, 8)
       .from(
         document.getElementById("message6"),
         { opacity: 0, duration: 0.1 },
@@ -1451,14 +1452,17 @@ export default Vue.extend({
         10
       )
       .addLabel("message7")
-      .call(
-        () => {
-          lineSound.play();
+      .to(
+        document.getElementById("messages"),
+        {
+          y: "-75%",
+          duration: 0.5,
+          onComplete: () => {
+            lineSound.play();
+          },
         },
-        undefined,
         11
       )
-      .to(document.getElementById("messages"), { y: "-75%", duration: 0.5 }, 11)
       .from(
         document.getElementById("message8"),
         { opacity: 0, duration: 0.1 },
