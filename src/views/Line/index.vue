@@ -1375,7 +1375,7 @@ export default Vue.extend({
         { opacity: 1, duration: 0.1 },
         1
       )
-      .addLabel("message1")
+      .addLabel("message1", 1.9)
       .from(
         document.getElementById("message2"),
         {
@@ -1387,7 +1387,7 @@ export default Vue.extend({
         },
         2
       )
-      .addLabel("message2")
+      .addLabel("message2", 2.9)
       .from(
         document.getElementById("message3"),
         { opacity: 0, duration: 0.1 },
@@ -1398,7 +1398,7 @@ export default Vue.extend({
         { opacity: 1, duration: 0.1 },
         4
       )
-      .addLabel("message3")
+      .addLabel("message3", 4.9)
       .from(
         document.getElementById("message4"),
         {
@@ -1410,7 +1410,7 @@ export default Vue.extend({
         },
         5
       )
-      .addLabel("message4")
+      .addLabel("message4", 5.9)
       .to(document.getElementById("messages"), { y: "-15%", duration: 0.5 }, 6)
       .from(
         document.getElementById("message5"),
@@ -1422,7 +1422,7 @@ export default Vue.extend({
         { opacity: 1, duration: 0.1 },
         7
       )
-      .addLabel("message5")
+      .addLabel("message5", 7.9)
       .to(
         document.getElementById("messages"),
         {
@@ -1439,7 +1439,7 @@ export default Vue.extend({
         { opacity: 0, duration: 0.1 },
         8
       )
-      .addLabel("message6")
+      .addLabel("message6", 8.9)
       .to(document.getElementById("messages"), { y: "-55%", duration: 0.5 }, 9)
       .from(
         document.getElementById("message7"),
@@ -1451,7 +1451,7 @@ export default Vue.extend({
         { opacity: 1, duration: 0.1 },
         10
       )
-      .addLabel("message7")
+      .addLabel("message7", 10.9)
       .to(
         document.getElementById("messages"),
         {
