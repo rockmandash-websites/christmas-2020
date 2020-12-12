@@ -14,7 +14,7 @@ import countdown from "./countdown.mp4";
 import Plyr from "plyr";
 import "plyr/dist/plyr.css";
 
-const keyframes = [1.51, 3.368, 5.605, 29.942];
+const keyframes = [1.51, 3.44, 27.004];
 
 function animate(func: Function) {
   let rafid = 0;
