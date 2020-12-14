@@ -14,7 +14,7 @@ import countdown from "./countdown.mp4";
 import Plyr from "plyr";
 import "plyr/dist/plyr.css";
 
-const keyframes = [1.51, 3.44, 27.004];
+const keyframes = [2.632, 24.987];
 
 function animate(func: Function) {
   let rafid = 0;
@@ -95,7 +95,7 @@ export default Vue.extend({
     });
 
     Mousetrap.bind("right", () => {
-      if (!this.player.playing && this.currentMessageIndex < 4) {
+      if (!this.player.playing && this.currentMessageIndex < 2) {
         this.currentMessageIndex += 1;
         timer.resume();
         this.player.play();
